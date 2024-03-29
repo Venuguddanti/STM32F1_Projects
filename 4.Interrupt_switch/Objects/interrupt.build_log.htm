@@ -1,0 +1,104 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: VENU GUDDANTI, R.V.R & J.C, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  E:\keil MDK\software\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DARMSTM.DLL V1.69.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+E:\venu works\EMBEDDED_STM32\STM32F103C8_Blue pill\Keil_STM32_Projects\4.Interrupt_switch\interrupt.uvprojx
+Project File Date:  02/22/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'E:\keil MDK\software\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+interrupt_switch.c(1): warning: In file included from...
+C:/Users/SRINADH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/SRINADH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/SRINADH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+interrupt_switch.c(5): warning: no previous extern declaration for non-static variable 'signal' [-Wmissing-variable-declarations]
+int signal=0;
+    ^
+interrupt_switch.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int signal=0;
+^
+interrupt_switch.c(21): warning: // comments are not allowed in this language [-Wcomment]
+        //RCC->APB2ENR |=RCC_APB2ENR_AFIOEN;
+        ^
+interrupt_switch.c(32): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOA->ODR |=(signal<<6);
+                           ~~ ~~~~~~^~~
+interrupt_switch.c(35): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        GPIOC->ODR&=~(1<<13);
+                                  ~~^~~~~~~~
+interrupt_switch.c(45): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void EXTI0_IRQHandler()
+                     ^
+                      void
+interrupt_switch.c(45): warning: no previous prototype for function 'EXTI0_IRQHandler' [-Wmissing-prototypes]
+void EXTI0_IRQHandler()
+     ^
+interrupt_switch.c(45): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI0_IRQHandler()
+^
+static 
+9 warnings generated.
+compiling interrupt_switch.c...
+linking...
+Program Size: Code=1128 RO-data=252 RW-data=0 ZI-data=1640  
+".\Objects\interrupt.axf" - 0 Error(s), 9 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/SRINADH/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/SRINADH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/system_stm32f10x.c
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
